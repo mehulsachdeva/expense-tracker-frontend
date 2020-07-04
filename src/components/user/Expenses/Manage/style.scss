@@ -1,0 +1,144 @@
+$buttonFontSize: 16px;
+$buttonFontWeight: 600;
+$buttonTextColor: #ffffff;
+
+@mixin buttonProps {
+    font-size: $buttonFontSize;
+    font-weight: $buttonFontWeight;
+    color: $buttonTextColor;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 3px;
+}
+
+.manage-expenses-container {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background: orange;
+    overflow-y: hidden;
+}
+
+.manage-expenses {
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+    background: #ffffff;
+    text-align: center;
+    width: 600px;
+    height: 600px;
+    overflow-y: scroll;
+    border: 0;
+    border-radius: 4px;
+}
+
+.new-expense-btn-container {
+    position: relative;
+    width: 100%;
+}
+
+.new-expense-button {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.current-expense-header {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.date-field-container {
+    margin-left: 75px;
+    margin-top: 12px;
+    input[type=date] {
+        width: 220px;
+        padding: 10px 10px;
+        font-size: 16px;
+        border: 0;
+        border-radius: 3px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.expenses-amount-container {
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    .per-day-container {
+        display: inline-block;
+        padding: 40px;
+    }
+    .total-expense-container {
+        display: inline-block;
+        padding: 40px;
+    }
+}
+
+.modal-container {
+    width: 500px;
+    height: 250px;
+    padding: 40px;
+    text-align: center;
+    .modal-add-expense-container, .modal-update-expense-container{
+        width: 100%;
+        .form-field-container {
+            width: 100%;
+            margin-top: 15px;
+            input[type=text], input[type=number] {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 8px 10px;
+                font-size: 16px;
+                border-radius: 4px;
+                margin-top: 6px;
+                border: 1px solid #ccc;
+            }
+            .label-container {
+                width: 100%;
+                text-align: left;
+                font-size: 18px;
+                font-weight: 600;
+                margin-top: 5px;
+            }
+            .add-button {
+                @include buttonProps;
+                width: 100%;
+                background: #F5B041;
+                &:hover {
+                    cursor: pointer;
+                    background: #F39C12;
+                }
+            }
+            .update-button {
+                @include buttonProps();
+                width: 49%;
+                display: inline-block;
+                background: #5DADE2;
+                &:hover {
+                    cursor: pointer;
+                    background: #3498DB;
+                }
+            }
+            .cancel-button {
+                @include buttonProps();
+                width: 49%;
+                margin-left: 3px;
+                display: inline-block;
+                background: #E74C3C;
+                &:hover {
+                    cursor: pointer;
+                    background: #CB4335;
+                }
+            }
+        }
+    }
+    .header {
+        font-size: 26px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,20 @@
+.simple-modal-container {
+    padding: 5px 10px;
+}
+
+.simple-modal-close-handler {
+    width: 100%;
+    position: absolute;
+    padding: 5px 0;
+    .close-symbol {
+        font-size: 18px;
+        float: right;
+        padding: 5px 20px;
+        font-weight: 600;
+        color: #ccc;
+        &:hover {
+            cursor: pointer;
+            color: black;
+        }
+    }
+}
